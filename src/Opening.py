@@ -47,13 +47,22 @@ class Opening:
     # Defines the vertices and faces        
     def generate(self):
         self.vertices = [ 
-                # Définir ici les sommets
+                [0, 0, 0 ], 
+                [0, 0, self.parameters['height']], 
+                [self.parameters['width'], 0, self.parameters['height']],
+                [self.parameters['width'], 0, 0],
+                [0, self.parameters['thickness'], 0 ], 
+                [0, self.parameters['thickness'], self.parameters['height']], 
+                [self.parameters['width'], self.parameters['thickness'], self.parameters['height']],
+                [self.parameters['width'], self.parameters['thickness'], 0]
                 ]
         self.faces = [
-                # définir ici les faces
+                [0, 4, 5, 1],
+                [2, 3, 7, 6],
+                [1, 2, 5, 6],
+                [0, 4, 7, 3]
                 ]   
         
     # Draws the faces                
-    def draw(self):        
-        # A compléter en remplaçant pass par votre code
-        pass
+    def draw(self):     
+        self.draw()
