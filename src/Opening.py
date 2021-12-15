@@ -65,4 +65,17 @@ class Opening:
         
     # Draws the faces                
     def draw(self):     
-        self.draw()
+            gl.glPushMatrix()
+            gl.glTranslatef(self.parameters['position'][0], self.parameters['position'][1], self.parameters['position'][2])
+            gl.glPolygonMode(gl.GL_FRONT_AND_BACK, gl.GL_FILL) # on trace les faces : GL_FILL
+            for x in self.faces:
+                gl.glBegin(gl.GL_QUADS) # Tracé d’un quadrilatère
+                gl.glColor3fv([0.5, 0.5, 0.5]) # Couleur gris moyen
+                gl.glVertex3fv(self.vertices[x[0]])
+                gl.glVertex3fv(self.vertices[x[1]])
+                gl.glVertex3fv(self.vertices[x[2]])
+                gl.glVertex3fv(self.vertices[x[3]])
+                gl.glEnd()
+            gl.glPopMatrix()
+            
+        

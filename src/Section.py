@@ -114,14 +114,3 @@ class Section:
     def createNewSections(self, x):
         # A compléter en remplaçant pass par votre code
         pass              
-        
-    # Draws the edges
-    def drawEdges(self):
-        # A compléter en remplaçant pass par votre code
-        pass           
-                    
-    # Draws the faces
-    def draw(self):
-        # A compléter en remplaçant pass par votre code
-        pass
-  
