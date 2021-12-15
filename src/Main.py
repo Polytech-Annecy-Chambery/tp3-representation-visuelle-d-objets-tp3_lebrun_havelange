@@ -37,17 +37,18 @@ def Q2c():
             )
 
 def Q3a():
-    pass  
+    wall = Wall({'position': [1,0,0], 'width':7, 'height':2.6, 'edges': True})
+    Configuration().add(wall).display()
 
 def Q4a():
     # Ecriture en utilisant des variables : A compléter
-    wall1 = Wall(...)
-    wall2 = Wall(...)
-    wall3 = Wall(...)
-    wall4 = Wall(...)  
-    house = House({'position': [-3, 1, 0], 'orientation':0})
+    house=House()
+    wall1 = Wall({'position': [1,1,0], 'width':7, 'height' : 2, 'edges' : True})
+    wall2 = Wall({'position': [1,6,0], 'width':7, 'height' : 2, 'edges' : True})
+    wall3 = Wall({'position': [1,1,0], 'width':5, 'height' : 2, 'edges' : True, 'orientation' : 90})
+    wall4 = Wall({'position': [8,1,0], 'width':5, 'height' : 2, 'edges' : True, 'orientation' : 90}) 
     house.add(wall1).add(wall3).add(wall4).add(wall2)
-    return Configuration().add(house)   
+    return Configuration().add(house).display()   
     
 def Q5a():  
     # Ecriture avec mélange de variable et de chaînage    
@@ -94,12 +95,12 @@ def Q6():
 def main():
     # Enlever un des commentaires pour la question traitée
     
-    configuration = Q1a()
+    #configuration = Q1a()
     # configuration = Q1b_f()
-    # configuration = Q2b()
-    # configuration = Q2c()
+    #configuration = Q2b()
+    #○configuration = Q2c()
     # configuration = Q3a()
-    # configuration = Q4a()
+    configuration = Q4a()
     # configuration = Q5a()
     # configuration = Q5b()
     # configuration = Q5c1()
